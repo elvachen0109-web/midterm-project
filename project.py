@@ -42,7 +42,7 @@ def parse_products(html: str) -> list[dict]:
     """
     
     soup = BeautifulSoup(html, "html.parser")
-    #print(soup.prettify()[:1000])
+   
     
     products = []
 
