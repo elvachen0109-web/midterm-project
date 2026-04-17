@@ -1,8 +1,3 @@
-"""
-簡易 Python 爬蟲示範程式
-使用 requests 取得網頁，BeautifulSoup 解析 HTML
-示範目標：https://codedamn-classrooms.github.io/webscraper-python-codedamn-classroom-website/?utm_source=chatgpt.com（專供練習爬蟲的網站）
-"""
 
 import requests
 import matplotlib.pyplot as plt
@@ -10,16 +5,7 @@ from bs4 import BeautifulSoup
 
 
 def fetch_page(url: str, timeout: int = 10) -> str | None:
-    """
-    取得網頁原始 HTML 內容。
-    
-    Args:
-        url: 目標網址
-        timeout: 請求逾時秒數
-        
-    Returns:
-        成功回傳 HTML 字串，失敗回傳 None
-    """
+   
     headers = {
         "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) Demo-Scraper/1.0"
     }
@@ -37,13 +23,7 @@ def parse_products(html: str) -> list[dict]:
     #print(soup.prettify()[:1000])
     
     products = []
-    
-    """
-    從 HTML 中解析名言與作者。
-    
-    Returns:
-        包含 {'text': 名言, 'author': 作者} 的列表
-    """
+
     
     
     for product in soup.select(".thumbnail"):
